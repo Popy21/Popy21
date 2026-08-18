@@ -119,5 +119,5 @@ An independent AI-intelligence publication: **16 thematic dossiers** (sovereign 
   <a href="https://hydrasecurity.fr/v10/"><b>hydrasecurity.fr/v10/</b></a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/adel-bouachraoui-8407a4234/">LinkedIn</a> &nbsp;·&nbsp;
   <a href="mailto:adelb13000@gmail.com">adelb13000@gmail.com</a>
-  <br><sub>HÉRA SASU — independent security &amp; AI R&amp;D · references &amp; PoCs on request</sub>
+  <br><sub>HÉRA — independent security &amp; AI R&amp;D · references &amp; PoCs on request</sub>
 </p>
