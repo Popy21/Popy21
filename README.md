@@ -24,7 +24,7 @@ Offensive security researcher & full-stack engineer. I **break web, infrastructu
 |  | |
 |---|---|
 | **CVEs credited** | 2 — Apple WebKit · GNOME libsoup (Red Hat CNA) |
-| **YesWeHack** | 53 reports · 7 rewarded · alias [`BaguettePwnM`](https://yeswehack.com/hunters/BaguettePwnM), KYC-verified |
+| **YesWeHack** | 7 rewarded · alias [`BaguettePwnM`](https://yeswehack.com/hunters/BaguettePwnM), KYC-verified |
 | **Sectors** | health · public sector · fintech · e-voting · automotive · open source |
 
 <!-- Optionnel, à décommenter une fois la référence publique confirmée :
