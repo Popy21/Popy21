@@ -6,7 +6,6 @@
   <a href="https://support.apple.com/en-us/127121"><img src="https://img.shields.io/badge/Apple-CVE--2026--28962-000000?style=flat-square&logo=apple&logoColor=white" alt="apple cve"></a>
   <a href="https://www.cve.org/CVERecord?id=CVE-2026-12478"><img src="https://img.shields.io/badge/GNOME_libsoup-CVE--2026--12478-4A86CF?style=flat-square&logo=gnome&logoColor=white" alt="libsoup cve"></a>
   <a href="https://yeswehack.com/hunters/BaguettePwnM"><img src="https://img.shields.io/badge/YesWeHack-53_reports-E11D2A?style=flat-square" alt="ywh"></a>
-  <a href="https://bughunters.google.com/"><img src="https://img.shields.io/badge/Google_VRP-2_awards-4285F4?style=flat-square&logo=google&logoColor=white" alt="google vrp"></a>
 </p>
 <p align="center">
   <a href="https://hydrasecurity.fr/v10/"><img src="https://img.shields.io/badge/HYDRA-hydrasecurity.fr%2Fv10-E11D2A?style=flat-square" alt="hydra"></a>
@@ -18,7 +17,7 @@
 
 ### `whoami`
 
-Offensive security researcher & full-stack engineer. I **break web, infrastructure and AI systems** — and I **build the tooling that scales it**. Bug-bounty hunter on **YesWeHack**, **Google VRP** and **Apple**, with **two CVEs credited by name** — [WebKit](https://support.apple.com/en-us/127121) and [GNOME libsoup](https://www.cve.org/CVERecord?id=CVE-2026-12478). Every finding backed by a working PoC, never theoretical. Finishing a Cybersecurity Master's (work-study) in the south of France.
+Offensive security researcher & full-stack engineer. I **break web, infrastructure and AI systems** — and I **build the tooling that scales it**. Bug-bounty hunter on **YesWeHack** and **Apple**, with **two CVEs credited by name** — [WebKit](https://support.apple.com/en-us/127121) and [GNOME libsoup](https://www.cve.org/CVERecord?id=CVE-2026-12478). Every finding backed by a working PoC, never theoretical. Finishing a Cybersecurity Master's (work-study) in the south of France.
 
 > Method: source-driven auditing and invariant reasoning over blind fuzzing — *"look where people don't look."*
 
@@ -26,7 +25,6 @@ Offensive security researcher & full-stack engineer. I **break web, infrastructu
 |---|---|
 | **CVEs credited** | 2 — Apple WebKit · GNOME libsoup (Red Hat CNA) |
 | **YesWeHack** | 53 reports · 7 rewarded · alias [`BaguettePwnM`](https://yeswehack.com/hunters/BaguettePwnM), KYC-verified |
-| **Google Bug Hunters** | 23 reports since April 2026 · 2 awards |
 | **Sectors** | health · public sector · fintech · e-voting · automotive · open source |
 
 <!-- Optionnel, à décommenter une fois la référence publique confirmée :
@@ -35,20 +33,25 @@ Offensive security researcher & full-stack engineer. I **break web, infrastructu
 
 ---
 
-### <img src="./assets/icons/disclosures.svg" width="20" height="20" alt=""> Selected disclosures
+### <img src="./assets/icons/disclosures.svg" width="20" height="20" alt=""> Vulnerability research
 
-| Date | Finding | Program | Severity |
+**Public CVEs** — credited by name in the vendor advisory.
+
+| CVE | Component | What it was | Severity |
 |---|---|---|---|
-| 2026-07 | **[CVE-2026-12478](https://www.cve.org/CVERecord?id=CVE-2026-12478)** — the fix for CVE-2026-0716 put the integer-overflow guard *inside* the `if (masked)` block, so unmasked server→client WebSocket frames stayed unguarded → OOB read in any libsoup client running `max_incoming_payload_size = 0` | GNOME / Red Hat CNA · [MR !518](https://gitlab.gnome.org/GNOME/libsoup/-/merge_requests/518) | 4.8 |
-| 2026-05 | **[CVE-2026-28962](https://support.apple.com/en-us/127121)** — WebKit: processing maliciously crafted web content may disclose sensitive user information. Fixed in Safari 26.5 | Apple | — |
-| 2026-01 | **eIDAS Level-of-Assurance downgrade** — LOW silently mapped to SUBSTANTIAL, bypassing ACR requirements on the French national identity federation | FranceConnect+ / DINUM | **8.6 High** |
-| 2026-02 | **OAuth `redirect_uri` over HTTP** — authorization codes transmitted in cleartext | Caisse des Dépôts | 6.8 |
-| 2026-02 | **POST-based XSS** via an unescaped error parameter on the password-reset flow | Caisse des Dépôts | 6.1 |
-| 2026-05 | **Unauthenticated Solr search servlet** exposed on two Ville de Paris services (Lutece framework) | Ville de Paris | 5.3 |
-| 2026-05 | **Improper access control** — `/env` reachable through a forged `x-access-token` header | GEODIS | 5.3 |
-| 2026-01 | **WAF design bypass** on a public GraphQL endpoint | Thüringer Aufbaubank | 3.7 |
+| **[CVE-2026-12478](https://www.cve.org/CVERecord?id=CVE-2026-12478)** | GNOME libsoup — WebSocket frame processing | The fix for CVE-2026-0716 put the integer-overflow guard *inside* the `if (masked)` block, so unmasked server→client frames stayed unguarded → out-of-bounds read in any client running `max_incoming_payload_size = 0`. Fixed in [MR !518](https://gitlab.gnome.org/GNOME/libsoup/-/merge_requests/518) | 4.8 · CWE-125 |
+| **[CVE-2026-28962](https://support.apple.com/en-us/127121)** | Apple WebKit | Processing maliciously crafted web content may disclose sensitive user information. Fixed in Safari 26.5 | — |
 
-**Rewarded:** 7 reports · top payouts **€2,500** (FranceConnect eIDAS) and **€1,750** (GNOME libsoup).
+**Selected findings** — reported privately through bug bounty programs. Targets are not named.
+
+| Finding | Sector | Severity |
+|---|---|---|
+| **eIDAS Level-of-Assurance downgrade** — LOW silently mapped to SUBSTANTIAL, bypassing ACR requirements on a national identity federation | Digital identity | **8.6 High** |
+| **OAuth `redirect_uri` over HTTP** — authorization codes transmitted in cleartext | Public finance | 6.8 |
+| **POST-based XSS** on a password-reset flow, via an error parameter reflected unescaped | Public finance | 6.1 |
+| **Unauthenticated search servlet** exposed on two production services | Public sector | 5.3 |
+| **Improper access control** — an internal `/env` endpoint reachable through a forged auth header | Logistics | 5.3 |
+| **WAF design bypass** on a public GraphQL endpoint | Banking | 3.7 |
 
 Recurring classes: `OAuth / OIDC / eIDAS logic flaws` · `Broken access control & IDOR` · `DOM & POST XSS` · `Open redirect` · `SSRF` · `HTTP request smuggling` · `Hardcoded credentials in mobile apps` · `Memory safety in C` · `CI/CD supply chain`
 
