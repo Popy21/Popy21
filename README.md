@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://support.apple.com/en-us/127121"><img src="https://img.shields.io/badge/Apple-CVE--2026--28962-000000?style=flat-square&logo=apple&logoColor=white" alt="apple cve"></a>
   <a href="https://www.cve.org/CVERecord?id=CVE-2026-12478"><img src="https://img.shields.io/badge/GNOME_libsoup-CVE--2026--12478-4A86CF?style=flat-square&logo=gnome&logoColor=white" alt="libsoup cve"></a>
-  <a href="https://yeswehack.com/hunters/BaguettePwnM"><img src="https://img.shields.io/badge/YesWeHack-53_reports-E11D2A?style=flat-square" alt="ywh"></a>
+  <a href="https://yeswehack.com/hunters/BaguettePwnM"><img src="https://img.shields.io/badge/YesWeHack-7_rewarded-E11D2A?style=flat-square" alt="ywh"></a>
 </p>
 <p align="center">
   <a href="https://hydrasecurity.fr/v10/"><img src="https://img.shields.io/badge/HYDRA-hydrasecurity.fr%2Fv10-E11D2A?style=flat-square" alt="hydra"></a>
