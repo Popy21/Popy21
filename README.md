@@ -116,11 +116,6 @@ An independent AI-intelligence publication: **16 thematic dossiers** (sovereign 
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Popy21&show_icons=true&hide_border=true&count_private=true&title_color=E11D2A&icon_color=E11D2A&text_color=6B655C&bg_color=FBFAF8" height="150" alt="stats">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Popy21&layout=compact&hide_border=true&title_color=E11D2A&text_color=6B655C&bg_color=FBFAF8" height="150" alt="top langs">
-</p>
-
-<p align="center">
   <a href="https://hydrasecurity.fr/v10/"><b>hydrasecurity.fr/v10/</b></a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/adel-bouachraoui-8407a4234/">LinkedIn</a> &nbsp;·&nbsp;
   <a href="mailto:adelb13000@gmail.com">adelb13000@gmail.com</a>
