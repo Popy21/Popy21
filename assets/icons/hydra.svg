@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E11D2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="HYDRA">
+  <path d="M9 21.2h6"/>
+  <path d="M12 21.2C12 17.6 7.9 16.6 5.8 12.9"/>
+  <path d="M12 21.2C12 17.2 12 14.2 12 11.1"/>
+  <path d="M12 21.2C12 17.6 16.1 16.6 18.2 12.9"/>
+  <circle cx="5.2" cy="10.9" r="2.3" fill="#E11D2A" stroke="none"/>
+  <circle cx="12" cy="8.9" r="2.5" fill="#E11D2A" stroke="none"/>
+  <circle cx="18.8" cy="10.9" r="2.3" fill="#E11D2A" stroke="none"/>
+</svg>

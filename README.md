@@ -4,7 +4,11 @@
 
 <p align="center">
   <a href="https://support.apple.com/en-us/127121"><img src="https://img.shields.io/badge/Apple-CVE--2026--28962-000000?style=flat-square&logo=apple&logoColor=white" alt="apple cve"></a>
+  <a href="https://www.cve.org/CVERecord?id=CVE-2026-12478"><img src="https://img.shields.io/badge/GNOME_libsoup-CVE--2026--12478-4A86CF?style=flat-square&logo=gnome&logoColor=white" alt="libsoup cve"></a>
   <a href="https://yeswehack.com/hunters/BaguettePwnM"><img src="https://img.shields.io/badge/YesWeHack-53_reports-E11D2A?style=flat-square" alt="ywh"></a>
+  <a href="https://bughunters.google.com/"><img src="https://img.shields.io/badge/Google_VRP-2_awards-4285F4?style=flat-square&logo=google&logoColor=white" alt="google vrp"></a>
+</p>
+<p align="center">
   <a href="https://hydra.land"><img src="https://img.shields.io/badge/HYDRA-hydra.land-E11D2A?style=flat-square" alt="hydra"></a>
   <a href="https://www.linkedin.com/in/adel-bouachraoui-8407a4234/"><img src="https://img.shields.io/badge/LinkedIn-adel--bouachraoui-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="linkedin"></a>
   <img src="https://img.shields.io/badge/based-Aix·Marseille,_FR-6B655C?style=flat-square" alt="location">
@@ -14,13 +18,45 @@
 
 ### `whoami`
 
-Offensive security researcher & full-stack engineer. I **break web, infrastructure and AI systems** — and I **build the tooling that scales it**. Bug-bounty hunter on **YesWeHack** (53 reports) and **Apple** — **credited in WebKit [CVE-2026-28962](https://support.apple.com/en-us/127121)**. Every finding backed by a working PoC, never theoretical. Finishing a Cybersecurity Master's (work-study) in the south of France.
+Offensive security researcher & full-stack engineer. I **break web, infrastructure and AI systems** — and I **build the tooling that scales it**. Bug-bounty hunter on **YesWeHack**, **Google VRP** and **Apple**, with **two CVEs credited by name** — [WebKit](https://support.apple.com/en-us/127121) and [GNOME libsoup](https://www.cve.org/CVERecord?id=CVE-2026-12478). Every finding backed by a working PoC, never theoretical. Finishing a Cybersecurity Master's (work-study) in the south of France.
 
 > Method: source-driven auditing and invariant reasoning over blind fuzzing — *"look where people don't look."*
 
+|  | |
+|---|---|
+| **CVEs credited** | 2 — Apple WebKit · GNOME libsoup (Red Hat CNA) |
+| **YesWeHack** | 53 reports · 7 rewarded · alias [`BaguettePwnM`](https://yeswehack.com/hunters/BaguettePwnM), KYC-verified |
+| **Google Bug Hunters** | 23 reports since April 2026 · 2 awards |
+| **Sectors** | health · public sector · fintech · e-voting · automotive · open source |
+
+<!-- Optionnel, à décommenter une fois la référence publique confirmée :
+| **MITRE CWE** | Content Development Repository submission accepted (CDR #207) |
+-->
+
 ---
 
-### 🐉 HYDRA — autonomous AI offensive-security engine &nbsp;·&nbsp; [hydra.land](https://hydra.land)
+### <img src="./assets/icons/disclosures.svg" width="20" height="20" alt=""> Selected disclosures
+
+| Date | Finding | Program | Severity |
+|---|---|---|---|
+| 2026-07 | **[CVE-2026-12478](https://www.cve.org/CVERecord?id=CVE-2026-12478)** — the fix for CVE-2026-0716 put the integer-overflow guard *inside* the `if (masked)` block, so unmasked server→client WebSocket frames stayed unguarded → OOB read in any libsoup client running `max_incoming_payload_size = 0` | GNOME / Red Hat CNA · [MR !518](https://gitlab.gnome.org/GNOME/libsoup/-/merge_requests/518) | 4.8 |
+| 2026-05 | **[CVE-2026-28962](https://support.apple.com/en-us/127121)** — WebKit: processing maliciously crafted web content may disclose sensitive user information. Fixed in Safari 26.5 | Apple | — |
+| 2026-01 | **eIDAS Level-of-Assurance downgrade** — LOW silently mapped to SUBSTANTIAL, bypassing ACR requirements on the French national identity federation | FranceConnect+ / DINUM | **8.6 High** |
+| 2026-02 | **OAuth `redirect_uri` over HTTP** — authorization codes transmitted in cleartext | Caisse des Dépôts | 6.8 |
+| 2026-02 | **POST-based XSS** via an unescaped error parameter on the password-reset flow | Caisse des Dépôts | 6.1 |
+| 2026-05 | **Unauthenticated Solr search servlet** exposed on two Ville de Paris services (Lutece framework) | Ville de Paris | 5.3 |
+| 2026-05 | **Improper access control** — `/env` reachable through a forged `x-access-token` header | GEODIS | 5.3 |
+| 2026-01 | **WAF design bypass** on a public GraphQL endpoint | Thüringer Aufbaubank | 3.7 |
+
+**Rewarded:** 7 reports · top payouts **€2,500** (FranceConnect eIDAS) and **€1,750** (GNOME libsoup).
+
+Recurring classes: `OAuth / OIDC / eIDAS logic flaws` · `Broken access control & IDOR` · `DOM & POST XSS` · `Open redirect` · `SSRF` · `HTTP request smuggling` · `Hardcoded credentials in mobile apps` · `Memory safety in C` · `CI/CD supply chain`
+
+> <img src="./assets/icons/warning.svg" width="18" height="18" alt="Warning"> **Responsible disclosure.** Live-target findings are reported privately through the relevant program and are **not** published here. What you'll find in my public repos is **CTF write-ups, lab PoCs against intentionally-vulnerable targets, my own tooling, and findings that have been publicly disclosed**. No undisclosed exploit code, ever.
+
+---
+
+### <img src="./assets/icons/hydra.svg" width="20" height="20" alt=""> HYDRA — autonomous AI offensive-security engine &nbsp;·&nbsp; [hydra.land](https://hydra.land)
 
 My flagship: a system that runs the offensive loop on its own and **only reports what it can prove**.
 
@@ -33,26 +69,33 @@ My flagship: a system that runs the offensive loop on its own and **only reports
 
 ---
 
-### 🎯 Vulnerability research & bug bounty
+### <img src="./assets/icons/package.svg" width="20" height="20" alt=""> Public work
 
-- 🍎 **Apple WebKit — [CVE-2026-28962](https://support.apple.com/en-us/127121)** · Safari 26.5, May 2026 — *malicious web content → sensitive-information disclosure.* Credited by name.
-- 🎯 **[53 reports on YesWeHack](https://yeswehack.com/hunters/BaguettePwnM)** · KYC-verified, alias `BaguettePwnM` — across health, public-sector & fintech.
+| Repo | What it is |
+|---|---|
+| **[security-research](https://github.com/Popy21/security-research)** | Vulnerability write-ups — every entry maps to a fixed, publicly tracked issue. Starts with the full [CVE-2026-12478](https://github.com/Popy21/security-research/blob/main/libsoup-CVE-2026-12478.md) analysis. |
+| **[ai-infra-nuclei](https://github.com/Popy21/ai-infra-nuclei)** | Nuclei templates for **exposed AI/LLM infrastructure** — Ollama, vLLM, ComfyUI, LangServe, Ray, MLflow, ChromaDB, Qdrant. None of them ship an auth screen; the official template set is CVE-centric and barely covers the misconfiguration. |
+| **[ctf-writeups](https://github.com/Popy21/ctf-writeups)** | Web security write-ups — PortSwigger / Juice Shop / picoCTF. |
+| **[hydra](https://github.com/Popy21/hydra)** | Public overview of the HYDRA engine. |
+| **[claude-news-mcp](https://github.com/Popy21/claude-news-mcp)** | Hosted MCP server exposing real-time Claude/Anthropic news to any MCP client. Free, no key. |
 
-Classes: `DOM-XSS` · `Open Redirect` · `IDOR` · `Broken Access Control` · `SSRF`
+Detection templates also merged upstream into [`projectdiscovery/nuclei-templates`](https://github.com/projectdiscovery/nuclei-templates).
 
-> ⚠️ **Responsible disclosure.** Live-target findings are reported privately through the relevant program and are **not** published here. What you'll find in my public repos is **CTF write-ups, lab PoCs against intentionally-vulnerable targets, my own tooling, and findings that have been publicly disclosed**. No undisclosed exploit code, ever.
+---
 
-### 📰 Also building — [claudenews.online](https://claudenews.online)
+### <img src="./assets/icons/news.svg" width="20" height="20" alt=""> Also building — [claudenews.online](https://claudenews.online)
 
 An independent AI-intelligence publication: **16 thematic dossiers** (sovereign AI, AI agents, AI & cybersecurity, regulation, open-source models…). I live in the AI world I attack.
 
 ---
 
-### 🧰 Arsenal
+### <img src="./assets/icons/terminal.svg" width="20" height="20" alt=""> Arsenal
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Bash](https://img.shields.io/badge/-Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
 ![Burp Suite](https://img.shields.io/badge/-Burp_Suite-FF6633?style=flat-square&logo=burpsuite&logoColor=white)
+![Nuclei](https://img.shields.io/badge/-Nuclei-000000?style=flat-square)
+![Ghidra](https://img.shields.io/badge/-Ghidra-CC0000?style=flat-square)
 ![Nmap](https://img.shields.io/badge/-Nmap-4682B4?style=flat-square)
 ![Metasploit](https://img.shields.io/badge/-Metasploit-2596CD?style=flat-square&logo=metasploit&logoColor=white)
 ![SQLMap](https://img.shields.io/badge/-SQLMap-D81E2C?style=flat-square)
@@ -62,20 +105,10 @@ An independent AI-intelligence publication: **16 thematic dossiers** (sovereign 
 ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 
-**Offense** · web exploitation (XSS / CSRF / SQLi / IDOR / access-control / open-redirect), PoC dev, recon
-**Systems** · Kali · BlackArch · Windows AD & Server · Docker · Nginx/Apache · TCP/IP · VPN · firewalls
-**Code** · Python · C# · Java · Swift · JS/TS (React, Next, Vue, Angular, Node) · PHP/Laravel
+**Offense** · web exploitation (XSS / CSRF / SQLi / IDOR / access control / open redirect), auth & federation protocols (OAuth 2.0, OIDC, SAML, eIDAS), source-driven auditing in C / Go / Python / JS-TS, Android static analysis, PoC development, recon<br>
+**Systems** · Kali · BlackArch · Windows AD & Server · Docker · Nginx/Apache · TCP/IP · VPN · firewalls<br>
+**Code** · Python · C# · Java · Swift · JS/TS (React, Next, Vue, Angular, Node) · PHP/Laravel<br>
 **Governance** · ISO 27001 · GDPR (ANSSI) · IGI 1300
-
----
-
-### 📌 What to pin here
-
-<!-- Create these public repos and pin them (Customize your pins on your profile). Keep everything sanitized per the disclosure note above. -->
-- **`hydra`** — public face / teaser of the HYDRA engine (open-source the safe parts you choose)
-- **`ctf-writeups`** — solved challenges, root-to-flag chains
-- **`security-research`** — lab PoCs, disclosed findings, methodology notes
-- **`offensive-tooling`** — small recon/exploitation utilities you wrote
 
 ---
 
