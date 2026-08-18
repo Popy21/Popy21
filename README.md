@@ -88,7 +88,7 @@ Detection templates also merged upstream into [`projectdiscovery/nuclei-template
 
 ### <img src="./assets/icons/news.svg" width="20" height="20" alt=""> Also building — [claudenews.online](https://claudenews.online)
 
-An independent AI-intelligence publication: **16 thematic dossiers** (sovereign AI, AI agents, AI & cybersecurity, regulation, open-source models…). I live in the AI world I attack.
+An independent AI-intelligence publication: **16 thematic dossiers** AI(sovereign, agents, cybersecurity, regulation, open-source models…). I live in the AI world I attack.
 
 ---
 
