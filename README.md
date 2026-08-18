@@ -9,7 +9,7 @@
   <a href="https://bughunters.google.com/"><img src="https://img.shields.io/badge/Google_VRP-2_awards-4285F4?style=flat-square&logo=google&logoColor=white" alt="google vrp"></a>
 </p>
 <p align="center">
-  <a href="https://hydra.land"><img src="https://img.shields.io/badge/HYDRA-hydra.land-E11D2A?style=flat-square" alt="hydra"></a>
+  <a href="https://hydrasecurity.fr/v10/"><img src="https://img.shields.io/badge/HYDRA-hydrasecurity.fr%2Fv10-E11D2A?style=flat-square" alt="hydra"></a>
   <a href="https://www.linkedin.com/in/adel-bouachraoui-8407a4234/"><img src="https://img.shields.io/badge/LinkedIn-adel--bouachraoui-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="linkedin"></a>
   <img src="https://img.shields.io/badge/based-Aix·Marseille,_FR-6B655C?style=flat-square" alt="location">
 </p>
@@ -56,7 +56,7 @@ Recurring classes: `OAuth / OIDC / eIDAS logic flaws` · `Broken access control 
 
 ---
 
-### <img src="./assets/icons/hydra.svg" width="20" height="20" alt=""> HYDRA — autonomous AI offensive-security engine &nbsp;·&nbsp; [hydra.land](https://hydra.land)
+### <img src="./assets/icons/hydra.svg" width="20" height="20" alt=""> HYDRA — autonomous AI offensive-security engine &nbsp;·&nbsp; [hydrasecurity.fr/v10/](https://hydrasecurity.fr/v10/)
 
 My flagship: a system that runs the offensive loop on its own and **only reports what it can prove**.
 
@@ -118,7 +118,7 @@ An independent AI-intelligence publication: **16 thematic dossiers** (sovereign 
 </p>
 
 <p align="center">
-  <a href="https://hydra.land"><b>hydra.land</b></a> &nbsp;·&nbsp;
+  <a href="https://hydrasecurity.fr/v10/"><b>hydrasecurity.fr/v10/</b></a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/adel-bouachraoui-8407a4234/">LinkedIn</a> &nbsp;·&nbsp;
   <a href="mailto:adelb13000@gmail.com">adelb13000@gmail.com</a>
   <br><sub>HÉRA SASU — independent security &amp; AI R&amp;D · references &amp; PoCs on request</sub>
