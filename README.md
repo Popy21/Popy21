@@ -5,6 +5,7 @@
 <p align="center">
   <a href="https://support.apple.com/en-us/127121"><img src="https://img.shields.io/badge/Apple-CVE--2026--28962-000000?style=flat-square&logo=apple&logoColor=white" alt="apple cve"></a>
   <a href="https://www.cve.org/CVERecord?id=CVE-2026-12478"><img src="https://img.shields.io/badge/GNOME_libsoup-CVE--2026--12478-4A86CF?style=flat-square&logo=gnome&logoColor=white" alt="libsoup cve"></a>
+  <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-121669"><img src="https://img.shields.io/badge/Microsoft-CVE--2026--121669-0078D4?style=flat-square&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMSAyMSI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjRjI1MDIyIi8+PHJlY3QgeD0iMTEiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzdGQkEwMCIvPjxyZWN0IHk9IjExIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiMwMEE0RUYiLz48cmVjdCB4PSIxMSIgeT0iMTEiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0iI0ZGQjkwMCIvPjwvc3ZnPg==" alt="microsoft cve"></a>
   <a href="https://yeswehack.com/hunters/BaguettePwnM"><img src="https://img.shields.io/badge/YesWeHack-7_rewarded-E11D2A?style=flat-square" alt="ywh"></a>
 </p>
 <p align="center">
@@ -17,13 +18,13 @@
 
 ### `whoami`
 
-Offensive security researcher & full-stack engineer. I **break web, infrastructure and AI systems** — and I **build the tooling that scales it**. Bug-bounty hunter on **YesWeHack** and **Apple**, with **two CVEs credited by name** — [WebKit](https://support.apple.com/en-us/127121) and [GNOME libsoup](https://www.cve.org/CVERecord?id=CVE-2026-12478). Every finding backed by a working PoC, never theoretical. Finishing a Cybersecurity Master's (work-study) in the south of France.
+Offensive security researcher & full-stack engineer. I **break web, infrastructure and AI systems** — and I **build the tooling that scales it**. Bug-bounty hunter on **YesWeHack**, **Apple** and **Microsoft (MSRC)**, with **three CVEs credited by name** — [WebKit](https://support.apple.com/en-us/127121), [GNOME libsoup](https://www.cve.org/CVERecord?id=CVE-2026-12478) and [PowerShell](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-121669). Every finding backed by a working PoC, never theoretical. Finishing a Cybersecurity Master's (work-study) in the south of France.
 
 > Method: source-driven auditing and invariant reasoning over blind fuzzing — *"look where people don't look."*
 
 |  | |
 |---|---|
-| **CVEs credited** | 2 — Apple WebKit · GNOME libsoup (Red Hat CNA) |
+| **CVEs credited** | 3 — Apple WebKit · GNOME libsoup (Red Hat CNA) · Microsoft PowerShell |
 | **YesWeHack** | 7 rewarded · alias [`BaguettePwnM`](https://yeswehack.com/hunters/BaguettePwnM), KYC-verified |
 | **Sectors** | health · public sector · fintech · e-voting · automotive · open source |
 
@@ -39,6 +40,7 @@ Offensive security researcher & full-stack engineer. I **break web, infrastructu
 
 | CVE | Component | What it was | Severity |
 |---|---|---|---|
+| **[CVE-2026-121669](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-121669)** | Microsoft PowerShell — web cmdlets | The August 2026 fix stripped `Authorization` on the redirect request only; the retry and `-Resume` paths rebuilt the request from the redirect target's URI and re-attached the session token → bearer token or Basic password sent to the redirect host. Fixed in PowerShell 7.6.10 / 7.7.0 ([write-up](https://github.com/Popy21/security-research/blob/main/powershell-CVE-2026-121669.md)). Credit shared with 15 other researchers | 6.1 · CWE-522 |
 | **[CVE-2026-12478](https://www.cve.org/CVERecord?id=CVE-2026-12478)** | GNOME libsoup — WebSocket frame processing | The fix for CVE-2026-0716 put the integer-overflow guard *inside* the `if (masked)` block, so unmasked server→client frames stayed unguarded → out-of-bounds read in any client running `max_incoming_payload_size = 0`. Fixed in [MR !518](https://gitlab.gnome.org/GNOME/libsoup/-/merge_requests/518) | 4.8 · CWE-125 |
 | **[CVE-2026-28962](https://support.apple.com/en-us/127121)** | Apple WebKit | Processing maliciously crafted web content may disclose sensitive user information. Fixed in Safari 26.5 | — |
 
